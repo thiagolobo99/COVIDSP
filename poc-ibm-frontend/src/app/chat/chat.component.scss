@@ -6,7 +6,6 @@
     height: 70%;
 }
 
-//HEADER
 .chatHeader {
     border-radius: 9px 9px 0px 0px;
     display: flex;
@@ -49,8 +48,6 @@
     }
 }
 
-
-// BOTTOM
 .bottomChat {
     height: 15%;
     background-color: #f5f5f5;
@@ -99,22 +96,12 @@
     }
 }
 
-
-
-
-
-
-
-
-// Body
-
 .messageBody {
     position: relative;
     height: 75%;
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #f5f5f5;
-
 
     .parentScroll {
         width: 95%;
@@ -127,11 +114,6 @@
         }
     }
 }
-
-
-
-
-
 
 .button-list {
     display: flex;
@@ -192,10 +174,6 @@
     }
 }
 
-
-
-
-
 @keyframes wave {
 
     0%,
@@ -208,7 +186,6 @@
         transform: translate(0, -10px);
     }
 }
-
 
 .logoMessage {
     // background-image: url("../../assets/images/100-pan-logo.png");
