@@ -2,7 +2,6 @@ header {
     position: relative;
     width: 100%;
     height: 70px;
-    // border: none;
     border: 1px solid rgba(28, 28, 28, .07);
     box-shadow: 0 7px 6px 0 rgba(33, 43, 54, .04);
     font-family: "Circular Std", sans-serif;
@@ -16,7 +15,6 @@ header .wrapper {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // padding: 10px;
     margin: 0 20px;
 
     >img {
