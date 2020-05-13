@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CovidApiService } from 'src/services/covid-api.service';
 
 @Component({
   selector: 'app-main-dashboard',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainDashboardComponent implements OnInit {
 
-  constructor() { }
+  numberCases: any
+  numberDeaths: any
+
+
+  constructor(private covidApi: CovidApiService) { }
 
   ngOnInit() {
+    this.covidApi.dataCovid().subscribe((response: any) => {
+      this.numberCases = response.Casos
+      this.numberDeaths = response.Mortes
+    })
   }
 
 }
