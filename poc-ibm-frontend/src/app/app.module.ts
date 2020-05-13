@@ -5,12 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainDashboardComponent } from './main-dashboard/main-dashboard.component';
 import { ChatComponent } from './chat/chat.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainDashboardComponent,
-    ChatComponent
+    ChatComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,
