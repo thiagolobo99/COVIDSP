@@ -2,11 +2,12 @@ import { Injectable } from '@angular/core';
 import { HttpParams, HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../environments/environment'
 import { map, catchError } from 'rxjs/operators';
+import { Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class CovidApiService {
+export class AssistantService {
 
   url: string = environment.local
 
@@ -16,13 +17,15 @@ export class CovidApiService {
     headers: new HttpHeaders({
       'Content-Type': 'application/json'
     })
-  };
-
-  dataCovid() {
-    return this.http.get(this.url + '/covid/general').pipe(
-      map(response => {
-        return response;
-      })
-    );
   }
+
+  assistantConversation(objConversation): Observable<any> {
+    return this.http.post<any>(this.url + '/assistant/', objConversation)
+      .pipe(
+        map(response => {
+          return response
+        })
+      )
+  }
+
 }
