@@ -7,7 +7,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\nbody,\nhtml {\n  height: 100%;\n  width: 100%;\n  margin: 0 !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mZXJuYW5kYW51bmVzL0Rlc2t0b3AvUE9DLUlCTS9wb2MtaWJtLWZyb250ZW5kL3BvYy1pYm0tZnJvbnRlbmQvc3JjL3N0eWxlcy5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLDhFQUFBO0FBQ0E7O0VBRUksWUFBWTtFQUNaLFdBQVc7RUFDWCxvQkFBb0IsRUFBQSIsImZpbGUiOiJzcmMvc3R5bGVzLnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKiBZb3UgY2FuIGFkZCBnbG9iYWwgc3R5bGVzIHRvIHRoaXMgZmlsZSwgYW5kIGFsc28gaW1wb3J0IG90aGVyIHN0eWxlIGZpbGVzICovXG5ib2R5LFxuaHRtbCB7XG4gICAgaGVpZ2h0OiAxMDAlO1xuICAgIHdpZHRoOiAxMDAlO1xuICAgIG1hcmdpbjogMCAhaW1wb3J0YW50O1xuICAgIC8vIHBhZGRpbmc6IDAgIWltcG9ydGFudDtcbn0iXX0= */", '', '']]
+module.exports = [[module.i, "/* You can add global styles to this file, and also import other style files */\nbody,\nhtml {\n  height: 100%;\n  width: 100%;\n  margin: 0 !important; }\n\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9Vc2Vycy9mZXJuYW5kYW51bmVzL0Rlc2t0b3AvUE9DLUlCTS9wb2MtaWJtLWZyb250ZW5kL3NyYy9zdHlsZXMuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSw4RUFBQTtBQUNBOztFQUVJLFlBQVk7RUFDWixXQUFXO0VBQ1gsb0JBQW9CLEVBQUEiLCJmaWxlIjoic3JjL3N0eWxlcy5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLyogWW91IGNhbiBhZGQgZ2xvYmFsIHN0eWxlcyB0byB0aGlzIGZpbGUsIGFuZCBhbHNvIGltcG9ydCBvdGhlciBzdHlsZSBmaWxlcyAqL1xuYm9keSxcbmh0bWwge1xuICAgIGhlaWdodDogMTAwJTtcbiAgICB3aWR0aDogMTAwJTtcbiAgICBtYXJnaW46IDAgIWltcG9ydGFudDtcbiAgICAvLyBwYWRkaW5nOiAwICFpbXBvcnRhbnQ7XG59Il19 */", '', '']]
 
 /***/ }),
 
@@ -557,7 +557,7 @@ if(false) {}
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/fernandanunes/Desktop/POC-IBM/poc-ibm-frontend/poc-ibm-frontend/src/styles.scss */"./src/styles.scss");
+module.exports = __webpack_require__(/*! /Users/fernandanunes/Desktop/POC-IBM/poc-ibm-frontend/src/styles.scss */"./src/styles.scss");
 
 
 /***/ })
