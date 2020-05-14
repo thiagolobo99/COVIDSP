@@ -8,7 +8,7 @@ import { map, catchError } from 'rxjs/operators';
 })
 export class CovidApiService {
 
-  url: string = environment.local
+  url: string = 'https://poc-ibm-backend.mybluemix.net/covid'
 
   constructor(private http: HttpClient) { }
 
@@ -19,7 +19,7 @@ export class CovidApiService {
   };
 
   dataCovid() {
-    return this.http.get(this.url + '/covid/general').pipe(
+    return this.http.get(this.url + '/general').pipe(
       map(response => {
         return response;
       })

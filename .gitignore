@@ -1,7 +1,11 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
+<<<<<<< HEAD
 /dist
+=======
+# /dist
+>>>>>>> 0182d3629ef34e58e6bb512cb694f61df644f3ab
 /tmp
 /out-tsc
 # Only exists if Bazel was run
