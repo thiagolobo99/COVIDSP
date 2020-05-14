@@ -9,7 +9,7 @@ import { Observable, throwError } from 'rxjs';
 })
 export class AssistantService {
 
-  url: string = environment.local
+  url: string = 'https://poc-ibm-backend.mybluemix.net'
 
   constructor(private http: HttpClient) { }
 
