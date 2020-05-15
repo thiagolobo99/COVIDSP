@@ -17,7 +17,7 @@ export class ChatComponent implements OnInit {
   array = []
   context = {};
   textUser: string;
-  clearAll: boolean; 
+  clearAll: boolean;
   arrayChat = [];
   arrayBotoes = [];
   messageToWatson = {};

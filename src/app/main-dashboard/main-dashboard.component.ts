@@ -14,10 +14,7 @@ export class MainDashboardComponent implements OnInit {
   numberDeaths: any
   showChat: boolean = false
   feeling: any;
-  tweets:any;
-  
-
-
+  tweets: any;
 
   constructor(private covidApi: CovidApiService, private twitterApi: TwitterApiService) { }
 
@@ -27,7 +24,7 @@ export class MainDashboardComponent implements OnInit {
       this.numberDeaths = response.Mortes
     })
 
-      this.twitterApi.dataTwitter().subscribe((response: any) => {
+    this.twitterApi.dataTwitter().subscribe((response: any) => {
     })
   }
 
