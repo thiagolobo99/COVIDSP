@@ -1,73 +1,64 @@
 .mainPage {
     height: 100%;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(29, 165, 132, .05), rgba(29, 165, 132, .05), rgba(29, 165, 132, 0.02));
 
-    .containerBox {
+    .bg-map {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+
+    }
+    .left-information {
+        position: relative;
         display: flex;
+        width: 350px;
+        height: 100%;
         flex-wrap: wrap;
-        justify-content: center;
+        flex-direction: column;
         padding: 0 30px;
-
-        .firstBox {
-            background: #4682B4;
-            width: 320px;
-            height: 100px;
-            padding: 3px;
-            margin: 10px;
-            margin-top: 100px;
-            border-radius: 5px;
-            border: 1px solid #dbe9f5;
-            box-shadow: var(--ion-box-shadow);
-            position: absolute;
-            left: 670px;
-            text-align: center;
-            color: white;
-            font-family: "Circular Std", sans-serif;
-            font-weight: 900;
-            font-size: 20px;
+        z-index: 10;
+        background-color: rgba(35,35,35,.9);
+        box-shadow: 2px 1px 5px 2px rgba(0, 0, 0, .2);
+        
+        h1{
+            font-size: 56px;
+            margin-bottom: 10px;
+            line-height: 1.1;
+            color: #fff;
         }
-
-        .secondBox {
-            background: #87CEFA;
-            width: 320px;
-            height: 100px;
-            padding: 3px;
-            margin: 10px;
-            margin-top: 150px;
-            border-radius: 5px;
-            border: 1px solid #dbe9f5;
-            box-shadow: var(--ion-box-shadow);
-            position: absolute;
-            top: 150px;
-            left: 670px;
-            text-align: center;
-            color: white;
-            font-family: "Circular Std", sans-serif;
-            font-weight: 900;
-            font-size: 20px;
+        
+        p{
+            font-size: 14px;
+            margin-bottom: 10px;
+            color: #ccc;
+        }
+        ul.covid-information{
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            color: #ccc;
+            font-size: 16px;
+            margin: 0;
+            padding: 0;
+            margin-top: 30px;
+            li{
+                font-weight: 300;
+                list-style: none;
+                margin-bottom: 10px;
+                span{
+                    font-size: 4vw;
+                    line-height: 1.1;
+                    font-weight: bold;
+                    color: #0fbfe8;
+                }
+            }
         }
     }
 
-    .thirdBox {
-        background: #87CEEB;
-        width: 320px;
-        height: 100px;
-        padding: 3px;
-        margin: 330px;
-        margin-right: 85px;
-        margin-top: 360px;
-        border-radius: 5px;
-        border: 1px solid #dbe9f5;
-        box-shadow: var(--ion-box-shadow);
-        text-align: center;
-        color: white;
-        font-family: "Circular Std", sans-serif;
-        font-weight: 900;
-        font-size: 20px;
-    }
-
-    .openChat {
+.openChat {
      cursor: pointer;
      right: 50px;
      bottom: 50px;
@@ -79,6 +70,7 @@
      box-shadow: 1px 3px 5px 2px rgba(0, 0, 0, .2);
      transition: all .3s;
      border: 1px solid transparent;
+     z-index: 9;
 
      svg {
          fill: #e5e6e6;

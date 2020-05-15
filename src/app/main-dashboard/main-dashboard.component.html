@@ -1,41 +1,23 @@
-<!-- <app-nav-bar></app-nav-bar>
-
-<div class="mainPage">
-  <div class="containerBox">
-    <div class="firstBox">
-      <p>{{numberCases}}</p>
-    </div>
-    <div class="secondBox">
-      <p>{{numberDeaths}}</p>
-    </div>
-    <div class="thirdBox">
-      <p>Número Três</p>
-    </div>
-  </div>
-
-  <button (click)="toggleChat()" class="openChat">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path fill="none" d="M0 0h24v24H0V0z" />
-      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" /></svg>
-  </button>
-
-
-  <app-chat (closeChat)="toggleChat()" *ngIf="showChat"></app-chat>
-</div> -->
-
 
 <app-nav-bar></app-nav-bar>
 <div class="mainPage">
-  <div class="containerBox">
-    <div class="firstBox">
-      <p>São Paulo</p>
-    </div>
-    <div class="secondBox">
-      <p>Casos confirmados</p>
-    </div>
-    <div class="thirdBox">
-      <p>Óbitos confirmados</p>
-    </div>
+  <div class="bg-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.680321200135!2d-46.6512636844698!3d-23.57992218467361!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5992c3b26975%3A0xb148aad01b411ba7!2sIBM%20Brasil%20-%20Tut%C3%B3ia!5e0!3m2!1sen!2sbr!4v1589568144905!5m2!1sen!2sbr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+  </div>
+
+  <div class="left-information">
+    <h1>COVIDSP</h1>
+    <p>Esta aplicação foi desenvolvida com a intenção de demonstrar algumas APIs da IBM Cloud em ação. Em uma só interface, é possível observar o NLU (Natural Understading Language), que se ocupa em analisar e classificar em positivo, negativo ou neutro qual o teor dos tweets dos usuários em relação a palavras-chave da pandemia no estado de São Paulo; o Watson Assistant funcionando como um assistente virtual que responde dúvidas de informações além das apresentadas na tela, e integrações com o Google Maps e o Twitter.</p>
+    <ul class="covid-information">
+      <li>
+        Casos confirmados
+        <span>{{numberCases}}</span>
+      </li>
+      <li>
+        Óbitos confirmados
+        <span>{{numberDeaths}}</span> 
+      </li>
+    </ul>
   </div>
 
   <button (click)="toggleChat()" class="openChat">
