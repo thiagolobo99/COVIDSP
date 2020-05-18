@@ -1,41 +1,13 @@
-<!-- <app-nav-bar></app-nav-bar>
-
 <div class="mainPage">
-  <div class="containerBox">
-    <div class="firstBox">
-      <p>{{numberCases}}</p>
-    </div>
-    <div class="secondBox">
-      <p>{{numberDeaths}}</p>
-    </div>
-    <div class="thirdBox">
-      <p>Número Três</p>
-    </div>
-  </div>
-
-  <button (click)="toggleChat()" class="openChat">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <path fill="none" d="M0 0h24v24H0V0z" />
-      <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z" /></svg>
-  </button>
 
 
-  <app-chat (closeChat)="toggleChat()" *ngIf="showChat"></app-chat>
-</div> -->
-
-
-<app-nav-bar></app-nav-bar>
-<div class="mainPage">
-  <div class="containerBox">
-    <div class="firstBox">
-      <p>São Paulo</p>
-    </div>
-    <div class="secondBox">
-      <p>Casos confirmados</p>
-    </div>
-    <div class="thirdBox">
-      <p>Óbitos confirmados</p>
-    </div>
+  <div class="mainContent">
+    <agm-map (mapReady)="onMapReady($event)" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false"
+      [zoomControl]="true">
+      <!-- <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"
+        [markerDraggable]="m.draggable">
+      </agm-marker> -->
+    </agm-map>
   </div>
 
   <button (click)="toggleChat()" class="openChat">

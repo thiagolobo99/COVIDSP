@@ -3,69 +3,12 @@
     width: 100%;
     background: linear-gradient(to bottom, rgba(29, 165, 132, .05), rgba(29, 165, 132, .05), rgba(29, 165, 132, 0.02));
 
-    .containerBox {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0 30px;
 
-        .firstBox {
-            background: #4682B4;
-            width: 320px;
-            height: 100px;
-            padding: 3px;
-            margin: 10px;
-            margin-top: 100px;
-            border-radius: 5px;
-            border: 1px solid #dbe9f5;
-            box-shadow: var(--ion-box-shadow);
-            position: absolute;
-            left: 670px;
-            text-align: center;
-            color: white;
-            font-family: "Circular Std", sans-serif;
-            font-weight: 900;
-            font-size: 20px;
-        }
-
-        .secondBox {
-            background: #87CEFA;
-            width: 320px;
-            height: 100px;
-            padding: 3px;
-            margin: 10px;
-            margin-top: 150px;
-            border-radius: 5px;
-            border: 1px solid #dbe9f5;
-            box-shadow: var(--ion-box-shadow);
-            position: absolute;
-            top: 150px;
-            left: 670px;
-            text-align: center;
-            color: white;
-            font-family: "Circular Std", sans-serif;
-            font-weight: 900;
-            font-size: 20px;
-        }
+    #mapContainer {
+        width: 100%;
     }
 
-    .thirdBox {
-        background: #87CEEB;
-        width: 320px;
-        height: 100px;
-        padding: 3px;
-        margin: 330px;
-        margin-right: 85px;
-        margin-top: 360px;
-        border-radius: 5px;
-        border: 1px solid #dbe9f5;
-        box-shadow: var(--ion-box-shadow);
-        text-align: center;
-        color: white;
-        font-family: "Circular Std", sans-serif;
-        font-weight: 900;
-        font-size: 20px;
-    }
+
 
     .openChat {
         cursor: pointer;
@@ -94,5 +37,12 @@
                 fill: #414141;
             }
         }
+    }
+    agm-map{
+        width: 900px;
+        height: 900px;
+        // background-color: #242f3e ;
+        background-color: #746855;
+        background-color: #d59563;
     }
 }
