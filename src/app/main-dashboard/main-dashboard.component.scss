@@ -1,7 +1,9 @@
 .mainPage {
     height: 100%;
-    width: 100%;
-
+    agm-map{
+        width: 900px;
+        height: 900px;
+    }
     .bg-map {
         position: absolute;
         width: 100%;
@@ -101,4 +103,6 @@
             fill: #e5e6e6;
          }
      }
- }
+    }
+}
+}
