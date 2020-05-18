@@ -3,8 +3,10 @@
     right: 20px;
     bottom: 40px;
     width: 400px;
-    height: 70%;
+    height: 80%;
     z-index: 9;
+    right: 0;
+    bottom: 0;
 }
 
 .chatHeader {
@@ -14,7 +16,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px 5px 15px;
-    height: 10%;
+    height: 5%;
 
     .chatLogo {
         width: 70px;
