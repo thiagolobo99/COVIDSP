@@ -151,7 +151,7 @@ export class MainDashboardComponent implements OnInit {
     // const coords = new google.maps.LatLng({ lat: -23.618237, lng: -46.635197 });
     const coords = [
       { location: new google.maps.LatLng(-23.557387, -46.639968), weight: 3.5 },
-      { location: new google.maps.LatLng(-22.912494, -47.065229), weight: 1.3 },
+      { location: new google.maps.LatLng(-22.912494, -47.065229), weight: 0.9 },
       { location: new google.maps.LatLng(-23.956584, -46.328731), weight: 0.5 }
     ]
     const gradient = ['rgba(0, 255, 255, 0)',
