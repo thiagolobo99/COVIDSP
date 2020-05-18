@@ -49,7 +49,9 @@ export class ChatComponent implements OnInit {
         sentBy: 'user',
         text: userInput
       })
-      this.ConversationFormat(userInput)
+    
+      this.ConversationFormat(userInput);
+      this.textUser = null;
     }
   }
   //pega o output do bot

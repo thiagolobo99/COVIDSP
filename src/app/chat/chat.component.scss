@@ -1,18 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;600&display=swap');
+
 .chatComponents {
     position: absolute;
-    right: 20px;
-    bottom: 40px;
+    right: 0px;
     width: 400px;
-    height: 80%;
+    height: 100%;
     z-index: 9;
-    right: 0;
-    bottom: 0;
+    bottom: 0 !important;
 }
 
 .chatHeader {
     border-radius: 9px 9px 0px 0px;
     display: flex;
-    background-color: #616161;
+    background-color: #1E90FF;
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px 5px 15px;
@@ -28,7 +28,7 @@
     }
 
     .closeSVG {
-        background-color: #616161;
+        background-color: #1E90FF;
         padding: 5px;
         border: 0;
         transition: all .3s;
@@ -42,7 +42,7 @@
         }
 
         &:hover {
-            background-color: darken(#616161, 10%);
+            background-color: darken(#1E90FF, 10%);
 
             svg {
                 transform: scale(1.3, 1.3);
@@ -52,12 +52,13 @@
 }
 
 .bottomChat {
-    height: 15%;
+    height: 25%;
     background-color: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 0px 0px 9px 9px;
+    bottom: 0;
 
     .boxInput {
         display: flex;
@@ -69,6 +70,7 @@
         border-radius: 6px;
         height: 30px;
         padding: 5px;
+        bottom: 0;
 
         .sendButton {
             background-color: #fff;
@@ -92,6 +94,7 @@
         border: none;
         border-bottom: 1px solid #B2BDC6;
         padding: 5px;
+        margin-bottom: 0px;
 
         &:focus {
             outline: transparent;
@@ -105,6 +108,8 @@
     overflow-y: scroll;
     overflow-x: hidden;
     background-color: #f5f5f5;
+    bottom: 0px;
+    padding-left: 10px;
 
     .parentScroll {
         width: 95%;
@@ -148,7 +153,7 @@
     width: 100%;
 
     .message {
-        background-color: #fff;
+        background-color: #1E90FF;
         margin: 10px 10px 10px 1px;
         border-radius: 1px 10px 10px 10px;
 
@@ -208,6 +213,7 @@
     padding: 10px;
     box-shadow: 0px 1px 4px rgba(0, 0, 0, 0.15);
     line-height: 21px;
+    bottom: 0px;
 
     span {
         overflow-wrap: break-word;
@@ -221,7 +227,7 @@
 
 .balloon.user {
     .message {
-        background-color: #616161;
+        background-color: #797878;
         margin: 10px;
         border-radius: 10px 1px 10px 10px;
         margin-left: auto;
@@ -234,6 +240,7 @@
         margin: 10px 10px 10px 1px;
         border-radius: 1px 10px 10px 10px;
         margin-right: auto;
+
 
         span {
 
