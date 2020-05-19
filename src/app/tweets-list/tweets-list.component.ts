@@ -19,26 +19,40 @@ export class TweetsListComponent implements OnInit {
     this.receiveInformationFromApi(this.arrayApis);
   }
 
-  receiveInformationFromApi(arrayApis){
-    arrayApis.map((api, position) =>{
+  receiveInformationFromApi(arrayApis) {
+    arrayApis.map((api, position) => {
       setTimeout(() => {
         this.returnTwitter(api);
-        if(!position){
+        if (!position) {
           this.receiveInformationFromApi(this.arrayApis);
         }
       }, 10000 * arrayApis.length - 10000 * position);
-      
+
     })
   }
 
   returnTwitter(objTwitter) {
-    this.twitterService.listTwitter(objTwitter).subscribe((response:any) => {
+    this.twitterService.listTwitter(objTwitter).subscribe((response: any) => {
       this.arrayListTweets = [];
 
       this.listTitle = objTwitter;
+      if (this.listTitle == "getQuarentenaSantos")
+        this.listTitle = "Quarentena em Santos"
+      if (this.listTitle == "getQuarentenaCampinas")
+        this.listTitle = "Quarentena em Campinas"
+      if (this.listTitle == "getQuarentenaSp")
+        this.listTitle = "Quarentena em São Paulo"
+
+      if (this.listTitle == "getCoronaVirusSp")
+        this.listTitle = "Coronavírus em São Paulo"
+      if (this.listTitle == "getCoronaCampinas")
+        this.listTitle = "Coronavírus em Campinas"
+      if (this.listTitle == "getCoronaSantos")
+        this.listTitle = "Coronavírus em Santos"
+
       response.result.map((respostas) => {
-        
-        
+
+
         this.arrayListTweets.push(
           {
             text: respostas.tweet,

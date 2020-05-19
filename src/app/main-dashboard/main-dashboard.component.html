@@ -1,10 +1,9 @@
-
 <app-nav-bar></app-nav-bar>
 <div class="mainPage">
   <div class="bg-map">
     <div class="mainContent">
-      <agm-map (mapReady)="onMapReady($event)" [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false"
-        [zoomControl]="true">
+      <agm-map (mapReady)="onMapReady($event)" [latitude]="lat" [longitude]="lng" [zoom]="zoom"
+        [disableDefaultUI]="false" [zoomControl]="true">
         <!-- <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"
           [markerDraggable]="m.draggable">
         </agm-marker> -->
@@ -15,7 +14,11 @@
 
   <div class="left-information">
     <h1>COVIDSP</h1>
-    <p>Esta aplicação foi desenvolvida com a intenção de demonstrar algumas APIs da <strong>IBM Cloud</strong> em ação. Em uma só interface, é possível observar o <strong>NLU (Natural Understading Language)</strong>, que analisa e classifica em positivo, negativo ou neutro o teor dos tweets dos usuários em relação a palavras-chave da pandemia no estado de São Paulo e o <strong>Watson Assistant</strong> no canto inferior direito como um assistente virtual que responde dúvidas de informações além das apresentadas na tela.</p>
+    <p>Esta aplicação foi desenvolvida com a intenção de demonstrar algumas APIs da <strong>IBM Cloud</strong> em ação.
+      Em uma só interface, é possível observar o <strong>NLU (Natural Understading Language)</strong>, que analisa e
+      classifica em positivo, negativo ou neutro o teor dos tweets dos usuários em relação a palavras-chave da pandemia
+      no estado de São Paulo e o <strong>Watson Assistant</strong> no canto inferior direito como um assistente virtual
+      que responde dúvidas de informações além das apresentadas na tela.</p>
     <ul class="covid-information">
       <li>
         Casos confirmados
@@ -23,16 +26,16 @@
       </li>
       <li>
         Óbitos confirmados
-        <span>{{numberDeaths}}</span> 
+        <span>{{numberDeaths}}</span>
       </li>
     </ul>
 
 
     <app-tweets-list></app-tweets-list>
 
-    
+
   </div>
-  
+
   <!-- <button (click)="toggleChat()" class="openChat"> <h3> Dúvidas? </h3>
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
       <path fill="none" d="M0 0h24v24H0V0z" />
@@ -41,5 +44,5 @@
 
 
   <app-chat (closeChat)="toggleChat()" *ngIf="showChat"></app-chat> -->
-<app-chat></app-chat>
+  <app-chat></app-chat>
 </div>
