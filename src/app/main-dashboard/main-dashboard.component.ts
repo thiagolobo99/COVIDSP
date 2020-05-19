@@ -26,7 +26,7 @@ export class MainDashboardComponent implements OnInit {
 
   // here are the map variables with their initial values
   clickedButton: boolean = false
-  zoom: number = 9
+  zoom: number = 9.5
 
   // initial center position for the map
   lat: number = -23.618237
