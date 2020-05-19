@@ -14,12 +14,11 @@ export class ChatComponent implements OnInit {
   constructor(private watsonAssistantService: AssistantService) { }
 
   sessionID: string = "";
-  array = []
-  context = {};
   textUser: string;
   clearAll: boolean; 
   arrayChat = [];
   arrayBotoes = [];
+  context = {};
   messageToWatson = {};
   wait4Response: boolean = false
   typingTimer;
@@ -40,16 +39,15 @@ export class ChatComponent implements OnInit {
     this.ConversationFormat('');
   }
   //pega o envio do usuário
-  onSubmit(userInput) {
+  onSubmit() {
     console.log("-----on submit -----")
-    console.log(userInput)
-    console.log(this.context)
-    if (userInput) {
+    if (this.textUser) {
       this.arrayChat.push({
         sentBy: 'user',
-        text: userInput
+        text: this.textUser
       })
-      this.ConversationFormat(userInput)
+      this.ConversationFormat(this.textUser);
+      this.textUser = null;
     }
   }
   //pega o output do bot
@@ -70,6 +68,7 @@ export class ChatComponent implements OnInit {
     console.log("----- conversation format -----")
     console.log(messageWatson)
     this.returnAssistant(messageWatson)
+    this.textUser = "";
   }
 
   returnAssistant(objConversation) {

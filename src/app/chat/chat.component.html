@@ -66,9 +66,9 @@
   </div>
 
   <div class="bottomChat">
-    <input type="text" #userInput class="inputMessage" (keyup.enter)="onSubmit(userInput.value)"
+    <input type="text" (keyup.enter)="onSubmit()" type="text" [(ngModel)]='textUser' class="inputMessage" 
       placeholder="Digite aqui sua mensagem para o meu bot">
-    <button type="submit" (click)="onSubmit(userInput.value)" class="sendButton">Enviar</button>
+    <button type="submit" (click)="onSubmit()" class="sendButton">Enviar</button>
   </div>
 
 </div>

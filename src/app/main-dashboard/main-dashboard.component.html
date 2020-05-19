@@ -7,7 +7,7 @@
 
   <div class="left-information">
     <h1>COVIDSP</h1>
-    <p>Esta aplicação foi desenvolvida com a intenção de demonstrar algumas APIs da IBM Cloud em ação. Em uma só interface, é possível observar o NLU (Natural Understading Language), que se ocupa em analisar e classificar em positivo, negativo ou neutro qual o teor dos tweets dos usuários em relação a palavras-chave da pandemia no estado de São Paulo; o Watson Assistant funcionando como um assistente virtual que responde dúvidas de informações além das apresentadas na tela, e integrações com o Google Maps e o Twitter.</p>
+    <p>Esta aplicação foi desenvolvida com a intenção de demonstrar algumas APIs da <strong>IBM Cloud</strong> em ação. Em uma só interface, é possível observar o <strong>NLU (Natural Understading Language)</strong>, que analisa e classifica em positivo, negativo ou neutro o teor dos tweets dos usuários em relação a palavras-chave da pandemia no estado de São Paulo e o <strong>Watson Assistant</strong> no canto inferior direito como um assistente virtual que responde dúvidas de informações além das apresentadas na tela.</p>
     <ul class="covid-information">
       <li>
         Casos confirmados
@@ -18,6 +18,11 @@
         <span>{{numberDeaths}}</span> 
       </li>
     </ul>
+
+
+    <app-tweets-list></app-tweets-list>
+
+    
   </div>
 
   <button (click)="toggleChat()" class="openChat">
