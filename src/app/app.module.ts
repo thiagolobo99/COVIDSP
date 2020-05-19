@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AgmCoreModule } from '@agm/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,9 +21,12 @@ import { TweetsListComponent } from './tweets-list/tweets-list.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyBXOy1WW_d_hmlLwv5ppJBAsOJprDllXfo' + '&libraries=visualization'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
