@@ -26,7 +26,7 @@ export class TweetsListComponent implements OnInit {
         if (!position) {
           this.receiveInformationFromApi(this.arrayApis);
         }
-      }, 10000 * arrayApis.length - 10000 * position);
+      }, 300000 * arrayApis.length - 300000 * position);
 
     })
   }
