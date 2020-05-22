@@ -63,7 +63,7 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "poc-ibm-frontend:build"
-          },
+            },
           "configurations": {
             "production": {
               "browserTarget": "poc-ibm-frontend:build:production"
