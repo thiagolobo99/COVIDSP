@@ -20,13 +20,13 @@ export class FezinhaService {
     })
   }
 
-  listTwitter(objTwitter) {    
+  listTwitter(objTwitter) {
     return this.http.get(this.url + objTwitter)
-    .pipe(
-      map(response => {
-        return response;
-      })
-    );
+      .pipe(
+        map(response => {
+          return response;
+        })
+      );
   }
 
 }
