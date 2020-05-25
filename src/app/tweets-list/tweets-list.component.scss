@@ -16,19 +16,27 @@ h3 {
   }
 }
 .error {
-    font-weight: bold;
+    // font-weight: bold;
   
-    font-size: 14px;
-    color: #fff;
+    // font-size: 14px;
+    // color: #fff;
+
+    font-size: 15px;
+    height: 40px;
+    line-height: 25px;
+    margin-top: 10px;
+    color: #bfbfbf;
+    padding-left: 10px;
+
   }
   
 
-.error {
-  font-weight: bold;
+// .error {
+//   font-weight: bold;
 
-  font-size: 14px;
-  color: #fff;
-}
+//   font-size: 14px;
+//   color: #fff;
+// }
 .ttArray {
   margin: 3%;
 }
@@ -54,8 +62,8 @@ h3 {
       position: absolute;
       top: 15px;
       left: 0;
-      height: 30px;
-      width: 3%;
+      height: 75%;
+      width: 4px;
       border-radius: 3px;
     }
 
@@ -67,13 +75,13 @@ h3 {
 
     &.neutral {
       &:before {
-        background-color: #ecea83;
+        background-color: rgb(255, 255, 104);
       }
     }
 
     &.negative {
       &:before {
-        background-color: #ec8383;
+        background-color: #EF6767;
       }
     }
 
