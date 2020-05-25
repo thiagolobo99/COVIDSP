@@ -1,6 +1,9 @@
 <h3><img src="/assets/icon-twitter.svg" alt=""> {{ listTitle }}</h3>
 
 <ul class="list-of-tweets">
+  <span class="error" *ngIf="arrayListTweets.length == 0">
+    Estamos buscando novos Tweets nessa região...
+  </span>
     <li *ngFor="let lobo of arrayListTweets;" class="{{lobo.label}}">
         <div>
             <span [innerHTML]="lobo.subject"></span>
