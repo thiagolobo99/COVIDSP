@@ -2,8 +2,14 @@
 <div class="mainPage">
   <div class="bg-map">
     <div class="mainContent">
-      <agm-map (mapReady)="onMapReady($event)" [latitude]="lat" [longitude]="lng" [zoom]="zoom"
-        [disableDefaultUI]="false" [zoomControl]="true">
+      <agm-map
+        (mapReady)="onMapReady($event)"
+        [latitude]="lat"
+        [longitude]="lng"
+        [zoom]="zoom"
+        [disableDefaultUI]="false"
+        [zoomControl]="true"
+      >
         <!-- <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng"
           [markerDraggable]="m.draggable">
         </agm-marker> -->
@@ -21,11 +27,11 @@
     <ul class="covid-information">
       <li>
         Casos confirmados
-        <span>{{numberCases}}</span>
+        <span>{{ numberCases }}</span>
       </li>
       <li>
         Óbitos confirmados
-        <span>{{numberDeaths}}</span>
+        <span>{{ numberDeaths }}</span>
       </li>
     </ul>
     <app-tweets-list></app-tweets-list>
