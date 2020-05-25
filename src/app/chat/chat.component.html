@@ -24,20 +24,19 @@
     </svg>
   </div>
 
-  <div class="messageBody">
-    <div class="scrollBody">
+  <div class="messageBody" id="scrollMe">
+    <div class="parentScroll">
       <div *ngFor="let message of arrayChat">
         <div [ngClass]="message.sentBy === 'bot'? 'balloon bot': 'balloon user'">
           <div *ngIf="message.sentBy === 'user'" class="message">
-            {{message.text}}
+            <span>
+              {{message.text}}
+            </span>
           </div>
-
-          <div *ngIf="message.sentBy === 'bot'">
-
-            <div class="message">
-              <span> {{message.text}}</span>
-            </div>
-
+          <div *ngIf="message.sentBy === 'bot'" class="message">
+            <span>
+              {{message.text}}
+            </span>
           </div>
         </div>
       </div>

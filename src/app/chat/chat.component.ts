@@ -48,7 +48,9 @@ export class ChatComponent implements OnInit {
       })
       this.ConversationFormat(this.textUser);
       this.textUser = null;
+      this.scrollToBottom()
     }
+
   }
   //pega o output do bot
   responseAssistant(text) {
@@ -57,6 +59,7 @@ export class ChatComponent implements OnInit {
       sentBy: 'bot',
       text: text
     })
+    this.scrollToBottom()
   }
   //monta o input do usuário e o output do bot para o envio, adicionando o context :) 
   ConversationFormat(text) {
@@ -80,12 +83,20 @@ export class ChatComponent implements OnInit {
         //atruibuição de valor no response
         if (content) {
           this.responseAssistant(content)
+          this.scrollToBottom()
         }
         else {
           content = null
         }
       })
     })
+  }
+
+  scrollToBottom() {
+    let element = document.getElementById("scrollMe");
+    if (element) {
+      element.scrollTop = element.scrollHeight;
+    }
   }
 
 }
