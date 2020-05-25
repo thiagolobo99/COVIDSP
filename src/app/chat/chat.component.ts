@@ -1,17 +1,23 @@
-import { Component, OnInit, OnChanges, EventEmitter, Output, Input } from '@angular/core';
-import { AssistantService } from 'src/services/assistant.service';
+import {
+  Component,
+  OnInit,
+  OnChanges,
+  EventEmitter,
+  Output,
+  Input,
+} from "@angular/core";
+import { AssistantService } from "src/services/assistant.service";
 
 @Component({
-  selector: 'app-chat',
-  templateUrl: './chat.component.html',
-  styleUrls: ['./chat.component.scss']
+  selector: "app-chat",
+  templateUrl: "./chat.component.html",
+  styleUrls: ["./chat.component.scss"],
 })
 export class ChatComponent implements OnInit {
-
-  @Input() showChat: boolean
+  @Input() showChat: boolean;
   @Output() closeChat: EventEmitter<any> = new EventEmitter();
 
-  constructor(private watsonAssistantService: AssistantService) { }
+  constructor(private watsonAssistantService: AssistantService) {}
 
   sessionID: string = "";
   textUser: string;
@@ -20,7 +26,7 @@ export class ChatComponent implements OnInit {
   arrayBotoes = [];
   context = {};
   messageToWatson = {};
-  wait4Response: boolean = false
+  wait4Response: boolean = false;
   typingTimer;
   concatUserTexts = "";
 
@@ -28,7 +34,7 @@ export class ChatComponent implements OnInit {
     this.context = {};
     this.clearAll = true;
     this.sessionID = "";
-    if (this.clearAll = true) {
+    if ((this.clearAll = true)) {
       this.arrayChat = [];
       this.arrayBotoes = [];
     }
@@ -36,56 +42,50 @@ export class ChatComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.ConversationFormat('');
+    this.ConversationFormat("");
   }
   //pega o envio do usuário
   onSubmit() {
-    console.log("-----on submit -----")
     if (this.textUser) {
       this.arrayChat.push({
-        sentBy: 'user',
-        text: this.textUser
-      })
+        sentBy: "user",
+        text: this.textUser,
+      });
       this.ConversationFormat(this.textUser);
       this.textUser = null;
     }
   }
   //pega o output do bot
   responseAssistant(text) {
-    console.log(text, "ASDASDSADSAD")
     this.arrayChat.push({
-      sentBy: 'bot',
-      text: text
-    })
+      sentBy: "bot",
+      text: text,
+    });
   }
-  //monta o input do usuário e o output do bot para o envio, adicionando o context :) 
+  //monta o input do usuário e o output do bot para o envio, adicionando o context :)
   ConversationFormat(text) {
     const messageWatson = {
       //se estou recebendo messege no backend, devo colocar message
       message: text,
-      context: this.context
-    }
-    console.log("----- conversation format -----")
-    console.log(messageWatson)
-    this.returnAssistant(messageWatson)
+      context: this.context,
+    };
+    this.returnAssistant(messageWatson);
     this.textUser = "";
   }
 
   returnAssistant(objConversation) {
-    this.watsonAssistantService.assistantConversation(objConversation).subscribe(response => {
-      console.log("----- response -----")
-      console.log(response, "asdasdasdasdasd")
-      this.context = response.data.context
-      response.data.output.text.map((content) => {
-        //atruibuição de valor no response
-        if (content) {
-          this.responseAssistant(content)
-        }
-        else {
-          content = null
-        }
-      })
-    })
+    this.watsonAssistantService
+      .assistantConversation(objConversation)
+      .subscribe((response) => {
+        this.context = response.data.context;
+        response.data.output.text.map((content) => {
+          //atruibuição de valor no response
+          if (content) {
+            this.responseAssistant(content);
+          } else {
+            content = null;
+          }
+        });
+      });
   }
-
 }

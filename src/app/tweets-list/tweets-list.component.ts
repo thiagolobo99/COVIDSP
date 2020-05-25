@@ -66,6 +66,5 @@ export class TweetsListComponent implements OnInit {
       });
     });
 
-    // console.log("ok", this.arrayListTweets);
   }
 }
