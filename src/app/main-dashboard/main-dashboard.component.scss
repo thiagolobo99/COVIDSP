@@ -33,7 +33,7 @@
         overflow-y: scroll;
         overflow-x: hidden;
         h1 {
-            font-size: 41px;
+            font-size: 68px;
             margin-bottom: 10px;
             margin-top: 20px;
             line-height: 1.1;
@@ -43,12 +43,14 @@
             width: 100%;
         }
         p {
-            font-size: 12px;
+            font-size: 15px;
             margin-bottom: 0px;
             color: #ccc;
             padding-bottom: 30px;
             text-align: justify;
             width: 100%;
+            position: relative;
+            margin-top: 0%;
         }
         ul.covid-information {
             display: flex;
