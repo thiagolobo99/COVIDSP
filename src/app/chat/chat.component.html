@@ -34,9 +34,7 @@
             </span>
           </div>
           <div *ngIf="message.sentBy === 'bot'" class="message">
-            <span>
-              {{message.text}}
-            </span>
+            <span [innerHTML]="message.text"></span>
           </div>
         </div>
       </div>
