@@ -7,18 +7,19 @@ import { map, catchError } from "rxjs/operators";
   providedIn: "root",
 })
 export class TwitterApiService {
-  url: string = "https://poc-ibm-backend.mybluemix.net/twitter";
+  url: string = "https://poc-ibm-backend.mybluemix.net/twitter/";
 
-  constructor(private http: HttpClient) {}
+  constructor(private http: HttpClient) { }
 
   private httpOptions = {
     headers: new HttpHeaders({
       "Content-Type": "application/json",
+
     }),
   };
 
-  dataTwitter() {
-    return this.http.get(this.url + "/").pipe(
+  dataTwitter(objTwitter) {
+    return this.http.get(this.url + objTwitter).pipe(
       map((response) => {
         return response;
       })

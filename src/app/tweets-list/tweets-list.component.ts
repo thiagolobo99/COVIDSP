@@ -1,5 +1,5 @@
 import { Component, OnInit } from "@angular/core";
-import { FezinhaService } from "src/services/fezinha.service";
+import { TwitterApiService } from "src/services/twitter-api";
 
 @Component({
   selector: "app-tweets-list",
@@ -7,7 +7,7 @@ import { FezinhaService } from "src/services/fezinha.service";
   styleUrls: ["./tweets-list.component.scss"],
 })
 export class TweetsListComponent implements OnInit {
-  constructor(private twitterService: FezinhaService) {}
+  constructor(private twitterService: TwitterApiService) { }
 
   listTitle: string;
   arrayListTweets = [];
@@ -37,7 +37,7 @@ export class TweetsListComponent implements OnInit {
   }
 
   returnTwitter(objTwitter) {
-    this.twitterService.listTwitter(objTwitter).subscribe((response: any) => {
+    this.twitterService.dataTwitter(objTwitter).subscribe((response: any) => {
       this.arrayListTweets = [];
 
       if (this.arrayListTweets.length == 0) {

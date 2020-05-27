@@ -1,14 +1,17 @@
 .mainPage {
     height: 100%;
+
     .mainContent {
         display: flex;
         width: 100%;
         height: 100%;
+
         agm-map {
             width: 100%;
             height: 100%;
         }
     }
+
     .bg-map {
         position: absolute;
         width: 100%;
@@ -17,7 +20,7 @@
         left: 0;
         z-index: 1;
     }
-    
+
     .left-information {
         position: fixed;
         // display: flex;
@@ -33,6 +36,7 @@
         box-shadow: 2px 1px 5px 2px rgba(0, 0, 0, .2);
         overflow-y: scroll;
         overflow-x: hidden;
+
         h1 {
             font-size: 68px;
             margin-bottom: 10px;
@@ -42,7 +46,10 @@
             font-weight: 300;
             text-shadow: 3px 6px 8px rgba(0, 0, 0, 0.15), -4px -4px 6px rgba(90, 90, 90, 0.1);
             width: 100%;
+            display: flex;
+            justify-content: center;
         }
+
         p {
             font-size: 14px;
             margin-bottom: 0px;
@@ -54,6 +61,7 @@
             margin-top: 0%;
             word-spacing: 0.08px;
         }
+
         ul.covid-information {
             display: flex;
             flex-wrap: wrap;
@@ -77,6 +85,7 @@
                 list-style: none;
                 margin-bottom: 10px;
                 width: 100%;
+
                 span {
                     display: block;
                     font-size: 2.8vw;
@@ -89,6 +98,7 @@
         }
     }
 }
+
 .openChat {
     cursor: pointer;
     right: 50px;
@@ -103,32 +113,19 @@
     border: 1px solid transparent;
     z-index: 9;
     color: white;
+
     svg {
         fill: #39bfe8;
         transition: all .3s;
     }
+
     &:hover {
         background-color: #e5e6e6;
         transform: scale(1.2, 1.2);
+
         svg {
             transform: scale(1.1, 1.1);
             fill: #fff;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
