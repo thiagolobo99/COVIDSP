@@ -78,8 +78,8 @@ export class ChatComponent implements OnInit {
 
   returnAssistant(objConversation) {
     this.watsonAssistantService.assistantConversation(objConversation).subscribe(response => {
-      console.log("----- response -----")
-      console.log(response, "asdasdasdasdasd")
+      // console.log("----- response -----")
+      // console.log(response, "asdasdasdasdasd")
       this.context = response.data.context
       response.data.output.text.map((content) => {
         //atruibuição de valor no response
