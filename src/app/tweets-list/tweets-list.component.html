@@ -1,10 +1,14 @@
-<h3><img src="/assets/icon-twitter.svg" alt=""> {{ listTitle }}</h3>
+<h3><img src="/assets/icon-twitter.svg" alt="" /> {{ listTitle }}</h3>
 
 <ul class="list-of-tweets">
-    <li *ngFor="let item of arrayListTweets;" class="{{item.label}}">
-        <div>
-            <span [innerHTML]="item.subject"></span>
-            <p [innerHTML]="item.text"></p>
-        </div>
-    </li>
+  <span class="error" *ngIf="arrayListTweets.length == 0">
+    Estamos buscando novos Tweets nessa região...
+  </span>
+
+  <li *ngFor="let item of arrayListTweets" class="{{ item.label }}">
+    <div class="ttArray">
+      <span [innerHTML]="item.subject"></span>
+      <p [innerHTML]="item.text"></p>
+    </div>
+  </li>
 </ul>
