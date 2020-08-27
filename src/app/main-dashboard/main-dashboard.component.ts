@@ -3,7 +3,7 @@ import { CovidApiService } from "src/services/covid-api.service";
 import { TwitterApiService } from "src/services/twitter-api";
 import { MouseEvent } from "@agm/core";
 import { map } from "rxjs/operators";
-import {} from "googlemaps";
+import { } from "googlemaps";
 
 @Component({
   selector: "app-main-dashboard",
@@ -38,7 +38,7 @@ export class MainDashboardComponent implements OnInit {
   constructor(
     private covidApi: CovidApiService,
     private twitterApi: TwitterApiService
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.covidApi.dataCovid().subscribe((response: any) => {
