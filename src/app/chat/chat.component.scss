@@ -24,7 +24,6 @@
         .chatLogo {
             width: 70px;
             height: 35px;
-            // background-image: url("../../assets/images/Logo-Negativo.png");
             background-repeat: no-repeat;
             background-size: 100%;
             margin: 7px;
@@ -36,7 +35,6 @@
         background-color: #fff;
         display: flex;
         align-items: center;
-        // font-family: 'IBM Plex Mono';
         // border-radius: 0px 0px 9px 9px;
         bottom: 0;
 
@@ -49,7 +47,6 @@
             height: 100%;
             padding: 5px;
             bottom: 0;
-            // font-family: 'IBM Plex Mono';
             font-size: 9.5px;
         }
 
@@ -202,7 +199,6 @@
             width: 100%;
             display: block;
             position: initial;
-            // font-family: 'IBM Plex Mono';
             color: white;
         }
     }
@@ -213,7 +209,6 @@
             margin: 10px;
             border-radius: 10px 1px 10px 10px;
             margin-left: auto;
-            // font-family: 'IBM Plex Mono';
         }
     }
 
@@ -230,9 +225,7 @@
             border: transparent;
 
             span {
-                // margin: 10px;
                 color: #fff;
-                // font-family: 'IBM Plex Mono';
             }
         }
     }
